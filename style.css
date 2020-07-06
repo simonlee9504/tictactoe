@@ -20,33 +20,55 @@ img.o {
 }
 
 .row0 th {
-    border-bottom: 1px solid black;
+    border-bottom: 5px solid black;
 }
 
 .col0 {
-    border-right: 1px solid black;
+    border-right: 5px solid black;
 }
 
 .row1 th {
-    border-bottom: 1px solid black;
-    border-top: 1px solid black;
+    border-bottom: 5px solid black;
+    border-top: 5px solid black;
+    padding-bottom: 0px;
 }
 
 .col1 {
-    border-right: 1px solid black;
-    border-left: 1px solid black;
+    border-right: 5px solid black;
+    border-left: 5px solid black;
 }
 
 .col2 {
-    border-left: 1px solid black;
+    border-left: 5px solid black;
 }
 
 .row2 th {
-    border-top: 1px solid black;
+    border-top: 5px solid black;
 }
 
 th {
     position: relative;
     margin: 0;
     padding: 0;
+}
+
+button {
+    color: #fff !important;
+    text-transform: uppercase;
+    text-decoration: none;
+    background: #6d91d4;
+    padding: 20px;
+    border-radius: 5px;
+    display: inline-block;
+    border: none;
+    transition: all 0.4s ease 0s;
+}
+
+button:hover {
+    background: #abc5e7;
+    letter-spacing: 1px;
+    -webkit-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    -moz-box-shadow: 0px 5px 40px -10px rgba(0,0,0,0.57);
+    box-shadow: 5px 40px -10px rgba(0,0,0,0.57);
+    transition: all 0.4s ease 0s;
 }

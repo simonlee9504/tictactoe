@@ -4,29 +4,10 @@ var player = 1;
 var played_spaces = [0, 0, 0, 0, 0, 0, 0, 0, 0];
 var x_spaces = document.getElementsByClassName("x");
 var o_spaces = document.getElementsByClassName("o");
-
-function swap() {
-    var element_x = document.getElementsByClassName("x")[0];
-    var element_x_style = getComputedStyle(element_x);
-    var element_o = document.getElementsByClassName("o")[0];
-    var element_o_style = getComputedStyle(element_o);
-    if(element_o_style.display == "none") {
-        element_o.style.display = "block";
-        element_x.style.display = "none";
-    }
-    else if(element_x.style.display == "none") {
-        element_x.style.display = "block";
-        element_o.style.display = "none";
-    }
-    console.log("hi");
-}
-
-function off() {
-    var element_x = document.getElementsByClassName("x")[0];
-    var element_o = document.getElementsByClassName("o")[0];
-    element_x.style.display = "none";
-    element_o.style.display = "none";
-}
+var col0_spaces = document.getElementsByClassName("col0");
+var col1_spaces = document.getElementsByClassName("col1");
+var col2_spaces = document.getElementsByClassName("col2");
+var container_spaces = [col0_spaces, col1_spaces, col2_spaces]; // container at (row,col) called using container_spaces[col][row]
 
 function reset() {
     for(var r = 0; r < table_width; r++) { // check column
@@ -105,6 +86,7 @@ function move(row, col) {
         if(player == 1) {
             x_spaces[table_width * row + col].style.visibility = "visible";
             x_spaces[table_width * row + col].style.cursor = "default";
+            container_spaces[col][row].style.backgroundColor = "white";
             played_spaces[table_width * row + col] = 1;
             if(checkWin(row, col)) {
                 alert("Player " + player + " wins!");
@@ -121,6 +103,7 @@ function move(row, col) {
         else if(player == 2) {
             o_spaces[table_width * row + col].style.visibility = "visible";
             o_spaces[table_width * row + col].style.cursor = "default";
+            container_spaces[col][row].style.backgroundColor = "white";
             played_spaces[table_width * row + col] = 2;
             if(checkWin(row, col)) {
                 alert("Player " + player + " wins!");
@@ -145,10 +128,12 @@ function show(row, col) {
         if(player == 1) {
             x_spaces[table_width * row + col].style.visibility = "visible";
             x_spaces[table_width * row + col].style.cursor = "pointer";
+            container_spaces[col][row].style.backgroundColor = "rgb(185, 185, 185)";
         }
         else if(player == 2) {
             o_spaces[table_width * row + col].style.visibility = "visible";
             o_spaces[table_width * row + col].style.cursor = "pointer";
+            container_spaces[col][row].style.backgroundColor = "rgb(185, 185, 185)";
         }
     }
 }
@@ -158,10 +143,12 @@ function noshow(row, col) {
         if(player == 1) {
             x_spaces[table_width * row + col].style.visibility = "hidden";
             x_spaces[table_width * row + col].style.cursor = "default";
+            container_spaces[col][row].style.backgroundColor = "white";
         }
         else if(player == 2) {
             o_spaces[table_width * row + col].style.visibility = "hidden";
             o_spaces[table_width * row + col].style.cursor = "default";
+            container_spaces[col][row].style.backgroundColor = "white";
         }
     }
 }
