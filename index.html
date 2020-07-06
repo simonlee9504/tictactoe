@@ -1,0 +1,72 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <link rel="stylesheet" type="text/css" href="style.css">
+        <script src="index.js"></script>
+        <title>Simon's Website</title>
+    </head>
+
+    <body>
+
+        <header>
+            Tic Tac Toe
+        </header>
+
+        <div class="game-ui">
+            <table class="game"> <!--array[3*3]-->
+                <tr class="row0">
+                    <th class="col0" onclick="move(0,0)" onmouseover="show(0,0)" onmouseout="noshow(0,0)"> <!--[3*0+0]-->
+                       <img class="x" id="img1" src="image-x-png-4.png"> 
+                       <img class="o" src="black-circle-transparent-23.png">
+                    </th>
+                    <th class="col1" onclick="move(0,1)" onmouseover="show(0,1)" onmouseout="noshow(0,1)"> <!--[3*0+1]-->
+                        <img class="x" src="image-x-png-4.png">
+                        <img class="o" src="black-circle-transparent-23.png">
+                    </th>
+                    <th class="col2" onclick="move(0,2)" onmouseover="show(0,2)" onmouseout="noshow(0,2)"> <!--[3*0+2]-->
+                        <img class="x" src="image-x-png-4.png">
+                        <img class="o" src="black-circle-transparent-23.png">
+                    </th>
+                </tr>
+                <tr class="row1">
+                    <th class="col0" onclick="move(1,0)" onmouseover="show(1,0)" onmouseout="noshow(1,0)"> <!--[3*1+0]-->
+                        <img class="x" src="image-x-png-4.png">
+                        <img class="o" src="black-circle-transparent-23.png">
+                    </th>
+                    <th class="col1" onclick="move(1,1)" onmouseover="show(1,1)" onmouseout="noshow(1,1)"> <!--[3*1+1]-->
+                        <img class="x" src="image-x-png-4.png">
+                        <img class="o" src="black-circle-transparent-23.png">
+                    </th>
+                    <th class="col2" onclick="move(1,2)" onmouseover="show(1,2)" onmouseout="noshow(1,2)"> <!--[3*1+2]-->
+                        <img class="x" src="image-x-png-4.png">
+                        <img class="o" src="black-circle-transparent-23.png">
+                    </th>
+                </tr>
+                <tr class="row2">
+                    <th class="col0" onclick="move(2,0)" onmouseover="show(2,0)" onmouseout="noshow(2,0)"> <!--[3*2+0]-->
+                        <img class="x" src="image-x-png-4.png">
+                        <img class="o" src="black-circle-transparent-23.png">
+                    </th>
+                    <th class="col1" onclick="move(2,1)" onmouseover="show(2,1)" onmouseout="noshow(2,1)"> <!--[3*2+1]-->
+                        <img class="x" src="image-x-png-4.png">
+                        <img class="o" src="black-circle-transparent-23.png">
+                    </th>
+                    <th class="col2" onclick="move(2,2)" onmouseover="show(2,2)" onmouseout="noshow(2,2)"> <!--[3*2+2]-->
+                        <img class="x" src="image-x-png-4.png">
+                        <img class="o" src="black-circle-transparent-23.png">
+                    </th>
+                </tr>
+            </table>
+            <button type="button" onclick="swap()" style="display: none">
+                Swap
+            </button>
+            <button type="button" onclick="off()" style="display: none">
+                Off
+            </button>
+            <button type="button" onclick="reset()">
+                Reset
+            </button>
+        </div>
+        
+    </body>
+</html>

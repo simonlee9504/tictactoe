@@ -1,0 +1,52 @@
+table.game {
+    /*width: 50%;*/
+    border-collapse: collapse;
+    table-layout: auto;
+}
+
+img.x {
+    visibility: hidden;
+    width: 200px;
+    height: 200px;
+}
+img.o {
+    position: absolute;
+    visibility: hidden;
+    width: 160px;
+    height: 160px;
+    padding: 20px;
+    top: 0px;
+    left: 0px;
+}
+
+.row0 th {
+    border-bottom: 1px solid black;
+}
+
+.col0 {
+    border-right: 1px solid black;
+}
+
+.row1 th {
+    border-bottom: 1px solid black;
+    border-top: 1px solid black;
+}
+
+.col1 {
+    border-right: 1px solid black;
+    border-left: 1px solid black;
+}
+
+.col2 {
+    border-left: 1px solid black;
+}
+
+.row2 th {
+    border-top: 1px solid black;
+}
+
+th {
+    position: relative;
+    margin: 0;
+    padding: 0;
+}
